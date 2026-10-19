@@ -5,7 +5,7 @@ BOOKSHELF ||--o{BOOK:has-many
 OFFICER ||--o{BORROWING: process
 AUTHOR ||--o{BOOK:writes
 PUBLISHER ||--o{BOOK:produces
-VISTIOR }o--o{BORROWING:"has many"
+VISITOR }o--o{BORROWING:"has many"
 BORROWING }o--o{BOOK:"has many"
 BOOK {
   string id
