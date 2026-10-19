@@ -1,28 +1,55 @@
 ```mermaid
 erDiagram
-KATEGORI ||--O{ BUKU: has-many
-RAK-BUKU || --O{ BUKU:has-many
-PEMINJAM || --o{ PETUGAS: meminjam-melalui
-BUKU {
+CATEGORY ||--o{BOOK: has-many
+BOOKSHELF ||--o{BOOK:has-many
+OFFICER ||--o{BORROWING: process
+AUTHOR ||--o{BOOK:writes
+PUBLISHER ||--o{BOOK:produces
+VISTIOR }o--o{BORROWING:"has many"
+BORROWING }o--o{BOOK:"has many"
+BOOK {
+  string id
   string title
   string author_id
   string publisher_id
-  string ISBN
+  string bookshelf_id
+  string ISBN UK
   int year_published
-  string pages
+  int pages
 }
-KATEGORI {
+CATEGORY {
+  string id
   string name
   string parent_category_id
 }
-RAK-BUKU{
+BOOKSHELF{
+  string id
   string name
-  string position_id
+  string location
 }
-PETUGAS{
+OFFICER{
+  string id
   string name
 }
-PEMINJAM{
+AUTHOR{
+  string id
   string name
+}
+PUBLISHER{
+  string id
+  string name
+}
+VISITOR{
+  string id
+  string name
+}
+BORROWING{
+  string id
+  string visitor_id
+  string officer_id
+  string book_id
+  datetime created_at
+  datetime due_date
+  datetime returned_at
 }
 ```
