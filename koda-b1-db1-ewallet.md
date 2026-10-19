@@ -12,16 +12,16 @@ WALLET {
   datetime updated_at
 }
 USERS {
-  string id
+  string id PK
   string name
   datetime verified_at
 }
 TRANSACTION{
-  string id
-  string sender_user_id
-  string receiver_user_id
-  string merchant_id
-  string category_transaction_id
+  string id PK
+  string sender_user_id FK
+  string receiver_user_id FK
+  string merchant_id FK
+  string category_transaction_id FK
   decimal amount
   datetime created_at
   string status
