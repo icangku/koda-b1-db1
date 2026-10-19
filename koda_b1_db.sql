@@ -1,0 +1,21 @@
+-- select current_database();
+-- select datname from pg_database;
+-- select tablename from pg_tables where schemaname ="template1";
+-- CREATE DATABASE koda_b1_db;
+-- CREATE TABLE users (
+-- id SERIAL PRIMARY KEY, 
+-- email VARCHAR(80) NOT NULL UNIQUE,
+-- password_hash VARCHAR(255) NOT NULL,
+-- created_at TIMESTAMPTZ DEFAULT NULL
+-- );
+-- INSERT INTO users (email, password_hash) VALUES('admin@gmail.com', '123456'), ('budi@gmail.com', '412314123')
+-- SELECT * FROM users;
+-- UPDATE users SET email = 'mind@gmail.com' where id = 1;
+--  DELETE FROM users where id = 1;
+
+-- CREATE TABLE test(
+--   id SERIAL PRIMARY KEY,
+--   email VARCHAR(80) NOT NULL UNIQUE
+-- )
+
+-- DROP TABLE test;
