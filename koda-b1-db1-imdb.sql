@@ -141,10 +141,10 @@
 -- FROM generate_series(1, 2000);
 
 -- find movies release after year 2000
--- select name from movies where year > 2000;
+select name from movies where year > 2000;
 -- find actors which its first and last name ends with 's'
--- select first_name, last_name from actors where last_name ILIKE '%s' and first_name ILIKE '%s';
+select first_name, last_name from actors where last_name ILIKE '%s' and first_name ILIKE '%s';
 -- find movies rating between 5 to 7 and year released between 2004 to 2006
--- select name, year, rank from movies where rank between 5 and 7 and  year between 2004 and 2007 order by rank, year;
+select name, year, rating from movies where rating between 5 and 7 and  year between 2004 and 2007 order by rank, year;
 -- find total of movies which its rank is 6
--- select count(*) from movies where rank = 6;
+select count(*) as total_rank_6 from movies where rating = 6;
